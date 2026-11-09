@@ -1,0 +1,9 @@
+# Zadanie 1: Podstawy DevOps
+
+## Czym jest DevOps?
+DevOps to kultura organizacyjna i zestaw praktyk łączących zespoły rozwoju oprogramowania (Development) oraz utrzymania infrastruktury (Operations). Opiera się na automatyzacji procesów, ciągłej integracji i wdrażaniu (CI/CD) oraz ścisłej współpracy na każdym etapie cyklu życia aplikacji. Pozwala to na szybsze, częstsze i bardziej niezawodne dostarczanie wysokiej jakości oprogramowania klientom końcowym.
+
+## 3 najpopularniejsze narzędzia w DevOps
+1. **Docker** – platforma do konteneryzacji umożliwiająca pakowanie aplikacji wraz z ich zależnościami w spójne, przenośne środowiska.
+2. **Kubernetes** – wiodący system orkiestracji służący do automatyzacji wdrażania, skalowania i zarządzania skonteneryzowanymi aplikacjami.
+3. **Jenkins / GitHub Actions** – narzędzia do budowania potoków CI/CD (Continuous Integration / Continuous Deployment), służące do automatycznego testowania, budowania i wdrażania kodu.
