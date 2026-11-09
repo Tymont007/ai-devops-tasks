@@ -1,0 +1,51 @@
+# Zadanie 2: Porównanie odpowiedzi różnych modeli AI
+
+**Pytanie testowe zadane modelom:**
+> Wymień 5 korzyści z używania kontenerów Docker w środowisku programistycznym.
+
+---
+
+## 1. Odpowiedź Modelu A (Claude 3.5 Sonnet )
+
+Używanie kontenerów Docker w środowisku deweloperskim przynosi szereg zalet, które bezpośrednio wpływają na wydajność zespołu oraz jakość dostarczanego kodu. Oto 5 kluczowych korzyści:
+
+1. **Eliminacja problemu "u mnie działa" (Spójność środowisk):**
+   Docker pakuje aplikację wraz z jej wszystkimi zależnościami (bibliotekami, konfiguracją, runtime) w jeden obraz. Dzięki temu kod uruchamia się dokładnie tak samo na komputerze dewelopera (z systemem macOS, Windows czy Linux), serwerze testowym oraz w środowisku produkcyjnym.
+
+2. **Izolacja i brak konfliktów zależności:**
+   Każda aplikacja lub usługa działa we własnym, odizolowanym kontenerze. Pozwala to na równoległe uruchamianie projektów wymagających różnych wersji tego samego oprogramowania (np. Python 3.8 vs Python 3.12 czy PostgreSQL 12 vs PostgreSQL 16) bez ryzyka konfliktów w systemie operacyjnym.
+
+3. **Szybki onboarding nowych programistów:**
+   Zamiast spędzać godziny lub dni na ręcznej instalacji bazy danych, kolejek wiadomości i konfigurowaniu lokalnego środowiska, nowy członek zespołu pobiera repozytorium i wykonuje jedną komendę (`docker-compose up`). Kompletne środowisko jest gotowe do pracy w kilka minut.
+
+4. **Wydajność zasobowa w porównaniu do maszyn wirtualnych:**
+   Kontenery współdzielą jądro systemu operacyjnego gospodarza, zamiast uruchamiać pełny system operacyjny dla każdej maszyny wirtualnej (VM). Dzięki temu zużywają znacznie mniej pamięci RAM i CPU, a ich uruchamianie trwa sekundy, a nie minuty.
+
+5. **Parzystość środowisk Dev/Prod (Dev/Prod Parity):**
+   Używanie tych samych obrazów Dockerowych na etapie tworzenia i wdrażania oprogramowania znacząco zmniejsza ryzyko wystąpienia błędów wynikających z różnic w konfiguracji serwerów. Co działa w lokalnym kontenerze, z bardzo wysokim prawdopodobieństwem zadziała również na produkcji.
+
+---
+
+## 2. Odpowiedź Modelu B (GPT-3.5 Turbo)
+
+Oto 5 korzyści z używania kontenerów Docker w środowisku programistycznym:
+
+1. **Spójność środowiska** – aplikacja działa tak samo na każdym komputerze, niezależnie od systemu operacyjnego.
+2. **Izolacja aplikacji** – procesy i zależności są od siebie oddzielone, co zapobiega konfliktom wersji bibliotek.
+3. **Oszczędność zasobów** – kontenery są lżejsze niż maszyny wirtualne i uruchamiają się bardzo szybko.
+4. **Łatwa przenośność** – raz skonfigurowany kontener można łatwo przenieść na inny serwer lub podzielić się nim z zespołem.
+5. **Szybsze wdrażanie (CI/CD)** – Docker ułatwia automatyzację testów oraz procesów budowania i wydawania oprogramowania.
+
+---
+
+## Podsumowanie i porównanie odpowiedzi
+
+| Cecha | Model A (Zaawansowany) | Model B (Lekki / Starszy) |
+| :--- | :--- | :--- |
+| **Długość i wyczerpanie tematu** | Dłuższa, wyczerpująca odpowiedź z rozbudowanym kontekstem. | Zwięzła, punktowa odpowiedź skoncentrowana na esencji. |
+| **Szczegółowość techniczna** | Wysoka – wymienia konkretne komendy (`docker-compose up`), pojęcia (Dev/Prod parity) i przykłady wersji (Python 3.8/3.12). | Podstawowa – opisuje koncepcje w ogólny sposób bez technicznych szczegółów. |
+| **Przykłady użycia** | Praktyczne przykłady (onboarding dewelopera, konflikty wersji baz danych). | Brak konkretnych przykładów scenariuszy z życia projektowego. |
+| **Formowanie i czytelność** | Pogrubienia kluczowych fraz, precyzyjna struktura ułatwiająca skanowanie. | Prosta lista punktowa. |
+
+### Wnioski:
+Model A lepiej sprawdza się w sytuacjach, gdy potrzebujemy dogłębnego wyjaśnienia, architektury rozwiązania lub przygotowania dokumentacji. Model B jest idealny do szybkich podsumowań, przypomnienia podstawowych pojęć lub gdy zależy nam na oszczędności tokenów i reakcji w krótkim czasie.
